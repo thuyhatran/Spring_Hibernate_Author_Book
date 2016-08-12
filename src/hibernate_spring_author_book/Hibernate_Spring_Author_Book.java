@@ -30,8 +30,8 @@ public class Hibernate_Spring_Author_Book {
              
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-	//AuthorDao authorDAO = context.getBean("authorDao",AuthorDao.class);
-        AuthorDao authorDAO = context.getBean(AuthorDao.class);
+	AuthorDao authorDAO = (AuthorDao) context.getBean("authorDao");
+        //AuthorDao authorDAO = context.getBean(AuthorDao.class);
 		
          // create a Book entity
         
